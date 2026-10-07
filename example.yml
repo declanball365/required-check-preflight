@@ -1,0 +1,12 @@
+# Synthetic reproduction of the documented workflow-filter failure mode.
+name: Python CI
+on:
+  pull_request:
+    paths:
+      - '**/*.py'
+jobs:
+  test:
+    name: Python tests
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Synthetic example only'
